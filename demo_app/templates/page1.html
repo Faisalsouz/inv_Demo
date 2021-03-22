@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+
+<h5>Wellcome to the invoice recognition demo.Please upload invoice in pdf form or Image form <br>
+and hit upload and run button.
+</h5>
+<p style="background-color:DodgerBlue;"> <h4 style="color:rgb(255, 0, 0) ;">Note: Due to the difficulty finding German invoices, the current
+demo is  trained  on just 100 invoice samples.Please note that if data provided , custom training will be more surprising!!</h4></p>
+
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button class="btn btn-primary" type="submit">Upload and Run</button>
+  </form>
+
+
+
+
+  <p><a href="{% url 'main' %}" class="btn-outline-primary">Return to home</a></p>
+{%endblock%}
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+
+demo_app/code/yolo-obj_best.weights
+media/*.jpg
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
